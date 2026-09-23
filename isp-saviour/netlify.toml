@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA routing: any path not matching a real file falls back to index.html
+# so React Router (not Netlify's server) handles it. Without this, a hard
+# refresh on e.g. /dashboard/map returns a 404 from Netlify's static host.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
