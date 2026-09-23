@@ -1,0 +1,17 @@
+{
+  "name": "isp-saviour-vsol-v1600d8-scanner",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Standalone, lightweight, read-only SNMP scanner for a VSOL V1600D8 8-port EPON OLT, syncing live ONU status/RX power into ISP Saviour's Supabase project.",
+  "type": "commonjs",
+  "main": "olt-scanner.js",
+  "scripts": {
+    "start": "node olt-scanner.js",
+    "scan-once": "node olt-scanner.js --once"
+  },
+  "dependencies": {
+    "net-snmp": "^3.11.2",
+    "@supabase/supabase-js": "^2.45.4",
+    "dotenv": "^16.4.5"
+  }
+}
